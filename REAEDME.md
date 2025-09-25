@@ -58,7 +58,7 @@ python Multithreading.py
     │   └── 2024-01-16/
     │       └── image3.jpg
 
-不是否按文件日期二次分类
+不按文件日期二次分类
     ├── pdf/
     │   └── document1.pdf
     ├── mp4/
