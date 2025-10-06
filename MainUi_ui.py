@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'd:\Programme\Python38Code\FinishedProduct\WeChatFileClassification\MainUi.ui'
+# Form implementation generated from reading ui file 'd:\Programme\Python38Code\WeChatFileClassification\MainUi.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.11
 #
