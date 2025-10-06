@@ -90,14 +90,15 @@ QLineEdit:hover, TextEdit:hover, PlainTextEdit:hover {
     border-bottom: 1px solid rgba(0, 0, 0, 100);
 }
 
-QLineEdit:focus {
-    border-bottom: 1px solid rgba(0, 0, 0, 13);
-    background-color: white;
+
+QTextEdit:focus, QLineEdit:focus, QComboBox:focus {
+    border: 1px solid rgb(0, 159, 170);
+    background: white;
 }
 
 TextEdit:focus,
 PlainTextEdit:focus {
-    border-bottom: 1px solid #009faa;
+    border-bottom: 1px solid rgb(0, 200, 211);
     background-color: white;
 }
 
@@ -122,7 +123,41 @@ PlainTextEdit:disabled {
 #lineEditButton:pressed {
     background-color: rgba(0, 0, 0, 6);
 }
-</string>
+
+HyperlinkButton {
+    /* font: 14px 'Segoe UI', 'Microsoft YaHei'; */
+    padding: 6px 12px 6px 12px;
+    color: #009faa;
+    border: none;
+    border-radius: 6px;
+    background-color: transparent;
+}
+
+HyperlinkButton[hasIcon=false] {
+    padding: 6px 12px 6px 12px;
+}
+
+HyperlinkButton[hasIcon=true] {
+    padding: 6px 12px 6px 36px;
+}
+
+HyperlinkButton:hover {
+    color: #009faa;
+    background-color: rgba(0, 0, 0, 10);
+    border: none;
+}
+
+HyperlinkButton:pressed {
+    color: #009faa;
+    background-color: rgba(0, 0, 0, 6);
+    border: none;
+}
+
+HyperlinkButton:disabled {
+    color: rgba(0, 0, 0, 0.43);
+    background-color: transparent;
+    border: none;
+}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
@@ -141,51 +176,8 @@ PlainTextEdit:disabled {
     <property name="spacing">
      <number>10</number>
     </property>
-    <item row="0" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout_6">
-      <property name="spacing">
-       <number>10</number>
-      </property>
-      <item>
-       <widget class="QLabel" name="wechatLabel_2">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>33</height>
-         </size>
-        </property>
-        <property name="text">
-         <string>微信文件夹路径：</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="wechatlineEdit_2">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>38</height>
-         </size>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="ChooseWeChatFile_2">
-        <property name="minimumSize">
-         <size>
-          <width>120</width>
-          <height>33</height>
-         </size>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 12pt &quot;微软雅黑&quot;;</string>
-        </property>
-        <property name="text">
-         <string>选择文件夹</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
+    <item row="4" column="0">
+     <widget class="QTextBrowser" name="LogTextBrowser"/>
     </item>
     <item row="1" column="0">
      <layout class="QHBoxLayout" name="horizontalLayout_4">
@@ -233,70 +225,51 @@ PlainTextEdit:disabled {
       </item>
      </layout>
     </item>
-    <item row="4" column="0">
-     <widget class="QTextBrowser" name="LogTextBrowser"/>
-    </item>
-    <item row="6" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout_5">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
       <property name="spacing">
        <number>10</number>
       </property>
-      <property name="topMargin">
-       <number>20</number>
-      </property>
-      <property name="bottomMargin">
-       <number>40</number>
-      </property>
       <item>
-       <widget class="QPushButton" name="Start_2">
+       <widget class="QLabel" name="wechatLabel_2">
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>40</height>
+          <height>33</height>
          </size>
         </property>
-        <property name="styleSheet">
-         <string notr="true">font: 12pt &quot;微软雅黑&quot;;</string>
-        </property>
         <property name="text">
-         <string>开始</string>
+         <string>微信文件夹路径：</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="Cancel_2">
+       <widget class="QLineEdit" name="wechatlineEdit_2">
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>40</height>
+          <height>38</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="ChooseWeChatFile_2">
+        <property name="minimumSize">
+         <size>
+          <width>120</width>
+          <height>33</height>
          </size>
         </property>
         <property name="styleSheet">
          <string notr="true">font: 12pt &quot;微软雅黑&quot;;</string>
         </property>
         <property name="text">
-         <string>取消</string>
+         <string>选择文件夹</string>
         </property>
        </widget>
       </item>
      </layout>
-    </item>
-    <item row="7" column="0">
-     <widget class="QLabel" name="VersionLabel">
-      <property name="text">
-       <string>版本：1.4.0  </string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="0">
-     <widget class="QProgressBar" name="progressBar">
-      <property name="value">
-       <number>0</number>
-      </property>
-     </widget>
     </item>
     <item row="2" column="0">
      <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -359,6 +332,58 @@ PlainTextEdit:disabled {
          </size>
         </property>
        </spacer>
+      </item>
+     </layout>
+    </item>
+    <item row="5" column="0">
+     <widget class="QProgressBar" name="progressBar">
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <property name="spacing">
+       <number>10</number>
+      </property>
+      <property name="topMargin">
+       <number>20</number>
+      </property>
+      <property name="bottomMargin">
+       <number>40</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="Start_2">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;微软雅黑&quot;;</string>
+        </property>
+        <property name="text">
+         <string>开始</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="Cancel_2">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;微软雅黑&quot;;</string>
+        </property>
+        <property name="text">
+         <string>取消</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
@@ -426,10 +451,62 @@ PlainTextEdit:disabled {
       </item>
      </layout>
     </item>
+    <item row="7" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="HyperlinkButton" name="HyperlinkButton">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>使用说明书</string>
+        </property>
+        <property name="url">
+         <url>
+          <string>https://kwp.youyer.top/pages/Manual/MMLang.html</string>
+         </url>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="VersionLabel">
+        <property name="text">
+         <string>版本：1.4.0  </string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
    </layout>
   </widget>
  </widget>
  <customwidgets>
+  <customwidget>
+   <class>HyperlinkButton</class>
+   <extends>PushButton</extends>
+   <header>qfluentwidgets</header>
+  </customwidget>
+  <customwidget>
+   <class>PushButton</class>
+   <extends>QPushButton</extends>
+   <header>qfluentwidgets</header>
+  </customwidget>
   <customwidget>
    <class>SwitchButton</class>
    <extends>QWidget</extends>
