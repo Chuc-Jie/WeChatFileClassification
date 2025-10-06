@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'd:\Programme\Python38Code\WeChatFileClassification\MainUi.ui'
+# Form implementation generated from reading ui file 'd:\Programme\Python38Code\FinishedProduct\WeChatFileClassification\MainUi.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.11
 #
@@ -81,15 +81,14 @@ class Ui_MainWindow(object):
 "    border-bottom: 1px solid rgba(0, 0, 0, 100);\n"
 "}\n"
 "\n"
-"\n"
-"QTextEdit:focus, QLineEdit:focus, QComboBox:focus {\n"
-"    border: 1px solid rgb(0, 159, 170);\n"
-"    background: white;\n"
+"QLineEdit:focus {\n"
+"    border-bottom: 1px solid rgba(0, 0, 0, 13);\n"
+"    background-color: white;\n"
 "}\n"
 "\n"
 "TextEdit:focus,\n"
 "PlainTextEdit:focus {\n"
-"    border-bottom: 1px solid rgb(0, 200, 211);\n"
+"    border-bottom: 1px solid #009faa;\n"
 "    background-color: white;\n"
 "}\n"
 "\n"
@@ -114,67 +113,13 @@ class Ui_MainWindow(object):
 "#lineEditButton:pressed {\n"
 "    background-color: rgba(0, 0, 0, 6);\n"
 "}\n"
-"\n"
-"HyperlinkButton {\n"
-"    /* font: 14px \'Segoe UI\', \'Microsoft YaHei\'; */\n"
-"    padding: 6px 12px 6px 12px;\n"
-"    color: #009faa;\n"
-"    border: none;\n"
-"    border-radius: 6px;\n"
-"    background-color: transparent;\n"
-"}\n"
-"\n"
-"HyperlinkButton[hasIcon=false] {\n"
-"    padding: 6px 12px 6px 12px;\n"
-"}\n"
-"\n"
-"HyperlinkButton[hasIcon=true] {\n"
-"    padding: 6px 12px 6px 36px;\n"
-"}\n"
-"\n"
-"HyperlinkButton:hover {\n"
-"    color: #009faa;\n"
-"    background-color: rgba(0, 0, 0, 10);\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"HyperlinkButton:pressed {\n"
-"    color: #009faa;\n"
-"    background-color: rgba(0, 0, 0, 6);\n"
-"    border: none;\n"
-"}\n"
-"\n"
-"HyperlinkButton:disabled {\n"
-"    color: rgba(0, 0, 0, 0.43);\n"
-"    background-color: transparent;\n"
-"    border: none;\n"
-"}")
+"")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
         self.gridLayout.setContentsMargins(15, 15, 15, 15)
         self.gridLayout.setSpacing(10)
         self.gridLayout.setObjectName("gridLayout")
-        self.LogTextBrowser = QtWidgets.QTextBrowser(self.centralwidget)
-        self.LogTextBrowser.setObjectName("LogTextBrowser")
-        self.gridLayout.addWidget(self.LogTextBrowser, 4, 0, 1, 1)
-        self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_4.setSpacing(10)
-        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
-        self.outputLabel_2 = QtWidgets.QLabel(self.centralwidget)
-        self.outputLabel_2.setMinimumSize(QtCore.QSize(0, 33))
-        self.outputLabel_2.setObjectName("outputLabel_2")
-        self.horizontalLayout_4.addWidget(self.outputLabel_2)
-        self.outputlineEdit_2 = QtWidgets.QLineEdit(self.centralwidget)
-        self.outputlineEdit_2.setMinimumSize(QtCore.QSize(0, 38))
-        self.outputlineEdit_2.setObjectName("outputlineEdit_2")
-        self.horizontalLayout_4.addWidget(self.outputlineEdit_2)
-        self.ChooseOutPutFile_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.ChooseOutPutFile_2.setMinimumSize(QtCore.QSize(120, 33))
-        self.ChooseOutPutFile_2.setStyleSheet("font: 12pt \"微软雅黑\";")
-        self.ChooseOutPutFile_2.setObjectName("ChooseOutPutFile_2")
-        self.horizontalLayout_4.addWidget(self.ChooseOutPutFile_2)
-        self.gridLayout.addLayout(self.horizontalLayout_4, 1, 0, 1, 1)
         self.horizontalLayout_6 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_6.setSpacing(10)
         self.horizontalLayout_6.setObjectName("horizontalLayout_6")
@@ -192,6 +137,49 @@ class Ui_MainWindow(object):
         self.ChooseWeChatFile_2.setObjectName("ChooseWeChatFile_2")
         self.horizontalLayout_6.addWidget(self.ChooseWeChatFile_2)
         self.gridLayout.addLayout(self.horizontalLayout_6, 0, 0, 1, 1)
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_4.setSpacing(10)
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        self.outputLabel_2 = QtWidgets.QLabel(self.centralwidget)
+        self.outputLabel_2.setMinimumSize(QtCore.QSize(0, 33))
+        self.outputLabel_2.setObjectName("outputLabel_2")
+        self.horizontalLayout_4.addWidget(self.outputLabel_2)
+        self.outputlineEdit_2 = QtWidgets.QLineEdit(self.centralwidget)
+        self.outputlineEdit_2.setMinimumSize(QtCore.QSize(0, 38))
+        self.outputlineEdit_2.setObjectName("outputlineEdit_2")
+        self.horizontalLayout_4.addWidget(self.outputlineEdit_2)
+        self.ChooseOutPutFile_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.ChooseOutPutFile_2.setMinimumSize(QtCore.QSize(120, 33))
+        self.ChooseOutPutFile_2.setStyleSheet("font: 12pt \"微软雅黑\";")
+        self.ChooseOutPutFile_2.setObjectName("ChooseOutPutFile_2")
+        self.horizontalLayout_4.addWidget(self.ChooseOutPutFile_2)
+        self.gridLayout.addLayout(self.horizontalLayout_4, 1, 0, 1, 1)
+        self.LogTextBrowser = QtWidgets.QTextBrowser(self.centralwidget)
+        self.LogTextBrowser.setObjectName("LogTextBrowser")
+        self.gridLayout.addWidget(self.LogTextBrowser, 4, 0, 1, 1)
+        self.horizontalLayout_5 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_5.setContentsMargins(-1, 20, -1, 40)
+        self.horizontalLayout_5.setSpacing(10)
+        self.horizontalLayout_5.setObjectName("horizontalLayout_5")
+        self.Start_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.Start_2.setMinimumSize(QtCore.QSize(0, 40))
+        self.Start_2.setStyleSheet("font: 12pt \"微软雅黑\";")
+        self.Start_2.setObjectName("Start_2")
+        self.horizontalLayout_5.addWidget(self.Start_2)
+        self.Cancel_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.Cancel_2.setMinimumSize(QtCore.QSize(0, 40))
+        self.Cancel_2.setStyleSheet("font: 12pt \"微软雅黑\";")
+        self.Cancel_2.setObjectName("Cancel_2")
+        self.horizontalLayout_5.addWidget(self.Cancel_2)
+        self.gridLayout.addLayout(self.horizontalLayout_5, 6, 0, 1, 1)
+        self.VersionLabel = QtWidgets.QLabel(self.centralwidget)
+        self.VersionLabel.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.VersionLabel.setObjectName("VersionLabel")
+        self.gridLayout.addWidget(self.VersionLabel, 7, 0, 1, 1)
+        self.progressBar = QtWidgets.QProgressBar(self.centralwidget)
+        self.progressBar.setProperty("value", 0)
+        self.progressBar.setObjectName("progressBar")
+        self.gridLayout.addWidget(self.progressBar, 5, 0, 1, 1)
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setContentsMargins(-1, 0, -1, 0)
         self.horizontalLayout_2.setSpacing(10)
@@ -208,25 +196,6 @@ class Ui_MainWindow(object):
         spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_2.addItem(spacerItem)
         self.gridLayout.addLayout(self.horizontalLayout_2, 2, 0, 1, 1)
-        self.progressBar = QtWidgets.QProgressBar(self.centralwidget)
-        self.progressBar.setProperty("value", 0)
-        self.progressBar.setObjectName("progressBar")
-        self.gridLayout.addWidget(self.progressBar, 5, 0, 1, 1)
-        self.horizontalLayout_5 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_5.setContentsMargins(-1, 20, -1, 40)
-        self.horizontalLayout_5.setSpacing(10)
-        self.horizontalLayout_5.setObjectName("horizontalLayout_5")
-        self.Start_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.Start_2.setMinimumSize(QtCore.QSize(0, 40))
-        self.Start_2.setStyleSheet("font: 12pt \"微软雅黑\";")
-        self.Start_2.setObjectName("Start_2")
-        self.horizontalLayout_5.addWidget(self.Start_2)
-        self.Cancel_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.Cancel_2.setMinimumSize(QtCore.QSize(0, 40))
-        self.Cancel_2.setStyleSheet("font: 12pt \"微软雅黑\";")
-        self.Cancel_2.setObjectName("Cancel_2")
-        self.horizontalLayout_5.addWidget(self.Cancel_2)
-        self.gridLayout.addLayout(self.horizontalLayout_5, 6, 0, 1, 1)
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_3.setContentsMargins(-1, 0, -1, 0)
         self.horizontalLayout_3.setSpacing(10)
@@ -243,20 +212,6 @@ class Ui_MainWindow(object):
         spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_3.addItem(spacerItem1)
         self.gridLayout.addLayout(self.horizontalLayout_3, 3, 0, 1, 1)
-        self.horizontalLayout = QtWidgets.QHBoxLayout()
-        self.horizontalLayout.setObjectName("horizontalLayout")
-        self.HyperlinkButton = HyperlinkButton(self.centralwidget)
-        self.HyperlinkButton.setStyleSheet("")
-        self.HyperlinkButton.setUrl(QtCore.QUrl("https://kwp.youyer.top/pages/Manual/MMLang.html"))
-        self.HyperlinkButton.setObjectName("HyperlinkButton")
-        self.horizontalLayout.addWidget(self.HyperlinkButton)
-        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout.addItem(spacerItem2)
-        self.VersionLabel = QtWidgets.QLabel(self.centralwidget)
-        self.VersionLabel.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.VersionLabel.setObjectName("VersionLabel")
-        self.horizontalLayout.addWidget(self.VersionLabel)
-        self.gridLayout.addLayout(self.horizontalLayout, 7, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -265,18 +220,17 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.outputLabel_2.setText(_translate("MainWindow", "保存文件夹路径："))
-        self.ChooseOutPutFile_2.setText(_translate("MainWindow", "选择文件夹"))
         self.wechatLabel_2.setText(_translate("MainWindow", "微信文件夹路径："))
         self.ChooseWeChatFile_2.setText(_translate("MainWindow", "选择文件夹"))
+        self.outputLabel_2.setText(_translate("MainWindow", "保存文件夹路径："))
+        self.ChooseOutPutFile_2.setText(_translate("MainWindow", "选择文件夹"))
+        self.Start_2.setText(_translate("MainWindow", "开始"))
+        self.Cancel_2.setText(_translate("MainWindow", "取消"))
+        self.VersionLabel.setText(_translate("MainWindow", "版本：1.4.0  "))
         self.outputLabel_3.setText(_translate("MainWindow", "是否保留原文件："))
         self.SwitchButton.setOnText(_translate("MainWindow", "是"))
         self.SwitchButton.setOffText(_translate("MainWindow", "否"))
-        self.Start_2.setText(_translate("MainWindow", "开始"))
-        self.Cancel_2.setText(_translate("MainWindow", "取消"))
         self.outputLabel_4.setText(_translate("MainWindow", "是否按文件日期对文件进行二次分类："))
         self.DateSwitchButton.setOnText(_translate("MainWindow", "是"))
         self.DateSwitchButton.setOffText(_translate("MainWindow", "否"))
-        self.HyperlinkButton.setText(_translate("MainWindow", "使用说明书"))
-        self.VersionLabel.setText(_translate("MainWindow", "版本：1.4.0  "))
-from qfluentwidgets import HyperlinkButton, SwitchButton
+from qfluentwidgets import SwitchButton
